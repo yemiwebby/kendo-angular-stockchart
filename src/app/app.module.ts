@@ -6,6 +6,9 @@ import { StockChartModule } from '@progress/kendo-angular-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
+import { DataService } from './data.service';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+
 
 
 
@@ -16,9 +19,11 @@ import 'hammerjs';
   imports: [
     BrowserModule,
     StockChartModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
